@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum MEI - Gerenciador Financeiro</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Orbitron:wght@400;500;700&display=swap">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>QUANTUM MEI <span class="glow">⚡</span></h1>
+        <p class="subtitle" style="text-align: center; margin-bottom: 30px; color: var(--primary-color);">Gerenciador Financeiro Futurista para Microempreendedores</p>
+
+        <div class="dashboard-grid">
+            <div class="card pulse">
+                <h3>Receitas Totais</h3>
+                <p style="font-size: 2rem; font-weight: bold;" class="income" id="totalIncome">R$ 0.00</p>
+                <p style="color: rgba(255,255,255,0.7);">Últimos 30 dias</p>
+            </div>
+            
+            <div class="card">
+                <h3>Despesas Totais</h3>
+                <p style="font-size: 2rem; font-weight: bold;" class="expense" id="totalExpenses">R$ 0.00</p>
+                <p style="color: rgba(255,255,255,0.7);">Últimos 30 dias</p>
+            </div>
+            
+            <div class="card">
+                <h3>Lucro Líquido</h3>
+                <p style="font-size: 2rem; font-weight: bold;" id="totalProfit">R$ 0.00</p>
+                <p style="color: rgba(255,255,255,0.7);">Balanço atual</p>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="financeChart"></canvas>
+        </div>
+
+        <div class="form-section">
+            <h2>NOVO REGISTRO</h2>
+            <form id="serviceForm">
+                <div class="form-group">
+                    <label for="description">Descrição</label>
+                    <input type="text" id="description" placeholder="Serviço prestado ou item vendido" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="value">Valor (R$)</label>
+                    <input type="number" id="value" placeholder="0.00" step="0.01" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date">Data</label>
+                    <input type="date" id="date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="type">Tipo</label>
+                    <select id="type" required>
+                        <option value="renda">Receita</option>
+                        <option value="gastos">Despesa</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn-primary">
+                    <span>+ Adicionar</span>
+                </button>
+            </form>
+        </div>
+
+        <div class="filter-section">
+            <h2 style="width: 100%;">FILTROS</h2>
+            
+            <div class="filter-group">
+                <label for="filterDate">Data específica</label>
+                <input type="date" id="filterDate">
+            </div>
+            
+            <div class="filter-group">
+                <label for="filterType">Tipo</label>
+                <select id="filterType">
+                    <option value="all">Todos</option>
+                    <option value="renda">Receitas</option>
+                    <option value="gastos">Despesas</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="filterMonth">Mês</label>
+                <select id="filterMonth">
+                    <option value="all">Todos</option>
+                    <option value="01">Janeiro</option>
+                    <option value="02">Fevereiro</option>
+                    <option value="03">Março</option>
+                    <option value="04">Abril</option>
+                    <option value="05">Maio</option>
+                    <option value="06">Junho</option>
+                    <option value="07">Julho</option>
+                    <option value="08">Agosto</option>
+                    <option value="09">Setembro</option>
+                    <option value="10">Outubro</option>
+                    <option value="11">Novembro</option>
+                    <option value="12">Dezembro</option>
+                </select>
+            </div>
+            
+            <button id="filterBtn" class="btn-primary">Aplicar Filtros</button>
+            <button id="resetBtn" class="btn-warning">Limpar Filtros</button>
+        </div>
+
+        <div class="table-section">
+            <h2>REGISTROS FINANCEIROS</h2>
+            <div style="display: flex; justify-content: flex-end; margin-bottom: 15px;">
+                <button id="exportBtn" class="btn-success">Exportar para Excel</button>
+            </div>
+            
+            <table id="recordsTable">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Descrição</th>
+                        <th>Valor (R$)</th>
+                        <th>Tipo</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
