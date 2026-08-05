@@ -1,152 +1,45 @@
-# Finanças
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-Quantum MEI é uma aplicação web moderna e futurista para gerenciamento financeiro de microempreendedores individuais (MEI). Com interface intuitiva e visualizações em tempo real, ajuda empreendedores a controlar receitas, despesas e lucro líquido de forma eficiente.
+# Quantum MEI — Gerenciador Financeiro
 
-✨ Funcionalidades
-📊 Dashboard Interativo: Visualização em tempo real de receitas, despesas e lucro líquido
+> Aplicativo de finanças para MEI
 
-📈 Gráficos Dinâmicos: Representação visual dos dados financeiros com Chart.js
+## 📌 Sobre o Projeto
 
-📝 Registro de Transações: Adição de receitas e despesas com descrição, valor e data
+Aplicação web futurista para gestão financeira de microempreendedores individuais (MEI), com dashboard em tempo real, gráficos e exportação de relatórios.
 
-🔍 Sistema de Filtros: Filtre registros por data, tipo (receita/despesa) ou mês específico
+## ✨ Funcionalidades
 
-📤 Exportação para Excel: Exporte todos os registros para planilha Excel com um clique
+- Dashboard com receitas, despesas e lucro líquido
+- Gráficos dinâmicos (Chart.js)
+- Registro e filtros de transações
+- Exportação para Excel
+- Tema futurista e responsivo
 
-🗑️ Gestão de Registros: Edite ou exclua transações conforme necessário
+## 🛠️ Tecnologias Utilizadas
 
-📱 Design Responsivo: Interface adaptável para diferentes dispositivos
+| Tecnologia | Descrição |
+|------------|-----------|
+| **HTML5** | Estrutura semântica e acessível da página |
+| **CSS3** | Estilo visual, layout e responsividade |
+| **JavaScript** | Interatividade, manipulação do DOM e lógica do cliente |
 
-🎨 Tema Futurista: Design moderno com elementos visuais atrativos
+## 🚀 Como Executar
 
-🚀 Tecnologias Utilizadas
-HTML5 - Estrutura da aplicação
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/mariniltonquintanilha-hash/finan-as.git
+   ```
+2. Abra o arquivo `index.html` no navegador.
 
-CSS3 - Estilização com variáveis CSS e design responsivo
+## 📁 Estrutura do Projeto
 
-JavaScript (ES6+) - Lógica da aplicação
+```
+├── index.html    → Página principal
+├── css/styles.css → Estilos e tema futurista
+└── js/script.js  → Lógica financeira e gráficos
+```
 
-Chart.js - Gráficos e visualizações de dados
+## 📄 Licença
 
-SheetJS (xlsx) - Exportação para Excel
-
-Google Fonts - Fontes Roboto e Orbitron
-
-📋 Pré-requisitos
-Navegador web moderno com suporte a:
-
-JavaScript habilitado
-
-LocalStorage para armazenamento de dados
-
-Canvas API para renderização de gráficos
-
-🛠️ Instalação e Configuração
-1. Clone o repositório
-bash
-git clone https://github.com/seu-usuario/quantum-mei.git
-cd quantum-mei
-2. Estrutura do Projeto
-text
-quantum-mei/
-├── index.html          # Arquivo principal HTML
-├── css/
-│   └── styles.css      # Estilos da aplicação
-├── js/
-│   └── script.js       # Lógica JavaScript principal
-└── README.md           # Este arquivo
-3. Execução
-Abra o arquivo index.html diretamente no navegador ou utilize um servidor local:
-
-bash
-# Usando Python
-python -m http.server 8000
-
-# Usando Node.js com http-server
-npx http-server
-Acesse: http://localhost:8000
-
-🎯 Como Usar
-Adicionar Registro
-Preencha o formulário "NOVO REGISTRO"
-
-Informe descrição, valor, data e tipo (Receita/Despesa)
-
-Clique em "+ Adicionar"
-
-Filtrar Registros
-Use os filtros para visualizar dados específicos por:
-
-Data específica
-
-Tipo (Receitas, Despesas ou Todos)
-
-Mês específico
-
-Aplique ou limpe filtros conforme necessário
-
-Exportar Dados
-Clique em "Exportar para Excel" para baixar todos os registros
-
-O arquivo será gerado no formato XLSX
-
-Visualizar Gráficos
-O gráfico é atualizado automaticamente com cada novo registro
-
-Visualize a distribuição de receitas e despesas ao longo do tempo
-
-📊 Armazenamento de Dados
-Os dados são armazenados localmente no navegador utilizando LocalStorage, garantindo:
-
-Persistência entre sessões
-
-Privacidade dos dados (não enviados para servidores externos)
-
-Performance otimizada
-
-🔧 Personalização
-Cores e Tema
-As cores podem ser personalizadas editando as variáveis CSS no arquivo css/styles.css:
-
-css
-:root {
-    --primary-color: #6a11cb;
-    --secondary-color: #2575fc;
-    --income-color: #00d4aa;
-    --expense-color: #ff416c;
-    /* Adicione suas customizações aqui */
-}
-Adicionar Novos Recursos
-Estenda a função addRecord() para novos campos
-
-Modifique updateDashboard() para novos cálculos
-
-Atualize a tabela e filtros conforme necessário
-
-🤝 Contribuindo
-Contribuições são bem-vindas! Siga estes passos:
-
-Fork o projeto
-
-Crie uma branch para sua feature (git checkout -b feature/AmazingFeature)
-
-Commit suas mudanças (git commit -m 'Add some AmazingFeature')
-
-Push para a branch (git push origin feature/AmazingFeature)
-
-Abra um Pull Request
-
-📝 Licença
-Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para detalhes.
-
-👥 Autores
-Seu Nome - Desenvolvimento Inicial - SeuGitHub
-
-🙏 Agradecimentos
-Chart.js por fornecer excelentes bibliotecas de gráficos
-
-SheetJS pela funcionalidade de exportação Excel
-
-Google Fonts pelas fontes utilizadas
-
-Comunidade open-source por todas as inspirações
+Projeto desenvolvido para fins de portfólio.
